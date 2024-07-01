@@ -144,10 +144,7 @@
                     <div class="createPost">
                    <h3 class="mini-headign">create an event</h3>
                     <div class="post-text">
-                        <form action="eventdb.php" method="post">
-                            <label>Cover Image</label>
-                            <input type="file" name="img" placeholder="add a image">
-                            <br><br>
+                        <form action="conn.php" method="post">
                             <label>Title</label>
                             <input type="text" name="title" placeholder="Add a Title">
                             <br><br>
