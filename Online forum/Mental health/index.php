@@ -113,7 +113,7 @@
                     <a href="#"><i class="fa-solid fa-user-group"></i> Group</a>
                     <a href="#"><i class="fa-solid fa-star"></i></i> Favorites</a>
                     <a href="#"><i class="fa-solid fa-bookmark"></i></i> Saves</a>
-                    <a href="events.html"><i class="fa-solid fa-clock"></i> Events</a>
+                    <a href="Events/events.php"><i class="fa-solid fa-clock"></i> Events</a>
                     <a href="#"><i class="fa-solid fa-flag"></i> Pages</a>
 
                     <div><label class="darkTheme"> <span></span></label> Apply Dark Theme</div>
@@ -144,26 +144,10 @@
                     <div class="createPost">
                    <h3 class="mini-headign">create an event</h3>
                     <div class="post-text">
-                        <form action="conn.php" method="post">
-                            <label>Title</label>
-                            <input type="text" name="title" placeholder="Add a Title">
-                            <br><br>
-                            <label>Time & Date</label>
-                            <input type="datetime-local" name="date" placeholder="Add a Date">
-                            <br><br>
-                            <label>location</label>
-                            <input type="text" name="location" placeholder="Add a location">
-                            <br><br>
-                            <label>Content</label>
-                            <input type="text-area" name="content" placeholder="Add a content">
-                            <br><br>
-                            <label>Event Link</label>
-                            <input type="url" name="link" placeholder="Add a link">
-                            <br><br>
-                            <button>Submit</button>
-
-                        </form>
-  
+                <!--this can display some examples so that when a user creates an event he has idea-->
+                   <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates animi magnam sint, quisquam eveniet quaerat deserunt est vel necessitatibus impedit eaque quae tempora veritatis ullam. Voluptatibus sit hic libero eius?</P>
+                    <br><br>
+                   <a href="Events/events.php"> <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button></a>
                     </div>
 
 

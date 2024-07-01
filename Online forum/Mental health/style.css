@@ -403,6 +403,7 @@ header{
     width: 100%;
     position: relative;
     margin-bottom: 30px;
+   
 }
 
 .post-text img{
@@ -422,6 +423,7 @@ header{
     box-shadow: 0 2px 5px 0 var(--shadow);
     color: var(--black);
 }
+
 
 .post-icon{
     display: flex;
