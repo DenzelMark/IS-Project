@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href= "events.css">
-</head>
-<body>
-    <!--Creating a forum--->
-
+  <!--Creating a forum--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatRoom</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet" href="events.css">
 </head>
 <body>
     
    
     <div class="event">
         <h2>Fill this forum to create a event</h2>
-        <form action="db.php" method="post">
+        <form action="connection.php" method="post">
             <label>Title</label>
             <input type="text" name="title" placeholder="Enter the title of the event">
             <br><br>

@@ -57,18 +57,18 @@
             <div class="home-left">
 
                 <div class="profile">
-                    <img src="images/user.jpg" alt="user">
-                    <h3>Zahidul hossain</h3>
+                    <img src="images/_.jpeg" alt="user">
+                    <h3>Strathmore</h3>
                 </div>
                
                 <div class="pages">
                     <h4 class="mini-headign">Pages</h4>
                     <label>
-                        <img src="images/messenger.png" alt="messenger">
+                       
                         <a href="Home.html"><span>Home</span></a>
                     </label>
                     <label>
-                        <img src="images/instagram.png" alt="instagram">
+                      
                         <a href="Feed.html"><span>Feedback</span></a>
                     </label>
                     <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
@@ -77,32 +77,28 @@
                 <div class="group">
                     <h4 class="mini-headign">Group</h4>
                     <label>
-                        <img src="images/gg.png" alt="group01">
-                        <span>Graphic design</span>
+                      
+                        <span>Members</span>
                     </label>
                     
                     <label>
-                        <img src="images/gg2.png" alt="group02">
-                        <span>website design</span>
+                        
+                        <span>learn</span>
                     </label>
 
-                    <label>
-                        <img src="images/gg3.png" alt="group03">
-                        <span>ZED.zahidul</span>
-                    </label>
+                    
 
                     <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
                 </div>
 
                 <div class="games">
-                    <h4 class="mini-headign">Games</h4>
+                    <h4 class="mini-headign">Community</h4>
                     <label>
-                        <img src="images/game.png" alt="game01">
-                        <span>Facebook games</span>
+                        
+                      <a href="Discussions/discussion.php"><span>Discussions</span></a>
                     </label>
                     <label>
-                        <img src="images/game2.png" alt="game02">
-                        <span>Free Play Games</span>
+                        <span>Events</span>
                     </label>
                     <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
                 </div>
@@ -156,12 +152,10 @@
 <!-- create an article here -->
 <div class="createPost">
 
-<h3 class="mini-headign"> Post something to share with others</h3>
+<h3 class="mini-headign"> Click on the button to create an article to share with others</h3>
 <div class="post-text">
-    <form action="db.php" method="post">
-    <img src="images/user.jpg" alt="user">
-    <input type="text-area" placeholder="What's on your mind, zahidul" name="message">
-    </form>
+    <p>Hi</p>
+<a href="Article/article.php"> <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button></a>
 </div>
 
 
@@ -172,7 +166,7 @@
 
 <h3 class="mini-headign"> Post something to share with others</h3>
 <div class="post-text">
-    <form action="db.php" method="post">
+    <form action="#" method="post">
     <img src="images/user.jpg" alt="user">
     <input type="text-area" placeholder="What's on your mind, zahidul" name="message">
     </form>
