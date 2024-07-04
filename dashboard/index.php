@@ -8,6 +8,7 @@
     
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Admin/style.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -105,57 +106,89 @@
                     <i class="uil uil-clock-three"></i>
                     <span class="text">Recent Activity</span>
                 </div>
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
+                <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Users</h2>
+                        <a href="http://localhost/phpmyadmin/index.php?route=/sql&db=admin&table=users&pos=0" class="btn">View All</a>
                     </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">premshahi@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">prakashhai@gmail.com</span>
-                        <span class="data-list">manishachand@gmail.com</span>
-                        <span class="data-list">pratimashhai@gmail.com</span>
-                        <span class="data-list">manshahi@gmail.com</span>
-                        <span class="data-list">ganeshchand@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>id</td>
+                                <td>Firstname</td>
+                                <td>Lastname</td>
+                                <td>Email</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                     <!--------><?php
+                //a php block
+                //echo  "wad";
+                //db connecntiom
+                require_once('Admin/config/db.php');
+                //2. select the query
+                $sql = "SELECT * FROM users";
+                //3.execute the query
+                $result = $conn->query($sql);
+                //4. check if there are any resutls
+                if($result->num_rows > 0):
+                    //4.1 show the data
+                //[
+                // ['id'=>1, 'name'=>'John']
+                 // ['id'=>2, 'name'=>'kohn']
+                  // ['id'=>3, 'name'=>'cohn']
+                  while($row = $result->fetch_assoc()):
+                    //4.2 assign the data to variables
+                    $id = $row['id'];
+                    $first_name = $row['first_name'];
+                    $last_name = $row['last_name'];
+                    $phone = $row['phone'];
+                    $email = $row['email'];
+                    $status = $row['status'];
+                    //4.3 create the html
+                    echo "<tr>";
+                    //id
+                    echo "<td>$id</td>";
+                    //photo
+                   
+                    //name
+                    echo "<td>$first_name</td>";
+                    echo "<td>$last_name</td>";
+                    //email
+                    echo "<td>$email</td>";
+                    echo "<td>$status</td>";
+                   
+                    
+                   
+
+
+
+
+
+                  endwhile;
+                
+                
+                //]
+
+
+
+                else:
+
+                echo ' ';
+
+                endif;
+
+                   
+
+
+
+               ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

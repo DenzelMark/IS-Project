@@ -20,7 +20,7 @@
                         <span class="icon">
                             <ion-icon name="logo-apple"></ion-icon>
                         </span>
-                        <span class="title">Brand Name</span>
+                        <span class="title">Strathmore</span>
                     </a>
                 </li>
 
@@ -159,76 +159,84 @@
             <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Recent Orders</h2>
-                        <a href="#" class="btn">View All</a>
+                        <h2>Users</h2>
+                        <a href="http://localhost/phpmyadmin/index.php?route=/sql&db=admin&table=users&pos=0" class="btn">View All</a>
                     </div>
 
                     <table>
                         <thead>
                             <tr>
-                                <td>Name</td>
-                                <td>Price</td>
-                                <td>Payment</td>
+                                <td>id</td>
+                                <td>Firstname</td>
+                                <td>Lastname</td>
+                                <td>Email</td>
                                 <td>Status</td>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>Star Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
+                     <!--------><?php
+                //a php block
+                //echo  "wad";
+                //db connecntiom
+                require_once('config/db.php');
+                //2. select the query
+                $sql = "SELECT * FROM users";
+                //3.execute the query
+                $result = $conn->query($sql);
+                //4. check if there are any resutls
+                if($result->num_rows > 0):
+                    //4.1 show the data
+                //[
+                // ['id'=>1, 'name'=>'John']
+                 // ['id'=>2, 'name'=>'kohn']
+                  // ['id'=>3, 'name'=>'cohn']
+                  while($row = $result->fetch_assoc()):
+                    //4.2 assign the data to variables
+                    $id = $row['id'];
+                    $first_name = $row['first_name'];
+                    $last_name = $row['last_name'];
+                    $phone = $row['phone'];
+                    $email = $row['email'];
+                    $status = $row['status'];
+                    //4.3 create the html
+                    echo "<tr>";
+                    //id
+                    echo "<td>$id</td>";
+                    //photo
+                   
+                    //name
+                    echo "<td>$first_name</td>";
+                    echo "<td>$last_name</td>";
+                    //email
+                    echo "<td>$email</td>";
+                    echo "<td>$status</td>";
+                   
+                    
+                   
 
-                            <tr>
-                                <td>Dell Laptop</td>
-                                <td>$110</td>
-                                <td>Due</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Apple Watch</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Addidas Shoes</td>
-                                <td>$620</td>
-                                <td>Due</td>
-                                <td><span class="status inProgress">In Progress</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Star Refrigerator</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Dell Laptop</td>
-                                <td>$110</td>
-                                <td>Due</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
+                  endwhile;
+                
+                
+                //]
 
-                            <tr>
-                                <td>Apple Watch</td>
-                                <td>$1200</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
 
-                            <tr>
-                                <td>Addidas Shoes</td>
-                                <td>$620</td>
-                                <td>Due</td>
-                                <td><span class="status inProgress">In Progress</span></td>
-                            </tr>
+
+                else:
+
+                echo ' ';
+
+                endif;
+
+                   
+
+
+
+               ?>
                         </tbody>
                     </table>
                 </div>
